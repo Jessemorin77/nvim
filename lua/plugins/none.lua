@@ -5,6 +5,7 @@ return {
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.prettier.with({
           extra_args = { "--single-quote", "--jsx-single-quote", "--trailing-comma", "es5" },
           -- Ensure you include file types relevant to your projects, e.g., jsx, tsx for React projects

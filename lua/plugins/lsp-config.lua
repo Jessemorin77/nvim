@@ -15,6 +15,7 @@ return {
           "jdtls",
           "prismals",
           "tailwindcss",
+          "pylsp"
         },
       })
     end,
@@ -29,6 +30,7 @@ return {
       lspconfig.tsserver.setup({})
       lspconfig.clangd.setup({}) 
       lspconfig.jdtls.setup{}
+      lspconfig.pylsp.setup{}
 
       lspconfig.prismals.setup({})
       lspconfig.tailwindcss.setup({})
