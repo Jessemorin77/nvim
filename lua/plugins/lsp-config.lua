@@ -15,7 +15,8 @@ return {
           "jdtls",
           "prismals",
           "tailwindcss",
-          "pylsp"
+          "pylsp",
+          "eslint"
         },
       })
     end,
@@ -28,13 +29,12 @@ return {
       --setup servers here
       lspconfig.lua_ls.setup({})
       lspconfig.tsserver.setup({})
-      lspconfig.clangd.setup({}) 
-      lspconfig.jdtls.setup{}
-      lspconfig.pylsp.setup{}
-
+      lspconfig.clangd.setup({})
+      lspconfig.jdtls.setup {}
+      lspconfig.pylsp.setup {}
+      lspconfig.eslint.setup({})
       lspconfig.prismals.setup({})
       lspconfig.tailwindcss.setup({})
-
     end,
   },
 }
