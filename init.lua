@@ -11,16 +11,16 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 --copy and paste support
 vim.g.clipboard = {
-  name = 'WslClipboard',
-  copy = {
-    ['+'] = 'clip.exe',
-    ['*'] = 'clip.exe',
-  },
-  paste = {
-    ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-  },
-  cache_enabled = 0,
+    name = "macOS-clipboard",
+    copy = {
+        ['+'] = 'pbcopy',
+        ['*'] = 'pbcopy',
+    },
+    paste = {
+        ['+'] = 'pbpaste',
+        ['*'] = 'pbpaste',
+    },
+    cache_enabled = 0
 }
 vim.api.nvim_set_keymap('v', '<C-c>', '"*y', {noremap = true, silent = true})
 -- 
