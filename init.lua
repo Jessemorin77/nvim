@@ -1,3 +1,4 @@
+_G.vim = vim or {}
 --Tab Spaceing
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
@@ -49,6 +50,9 @@ require("typing_test")
 vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true, desc = "Save" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { noremap = true, silent = true, desc = "Quit" })
 vim.keymap.set("n", "<leader>x", ":wqa<CR>", { noremap = true, silent = true, desc = "Save and Quit All" })
+vim.keymap.set("n", "<leader>X", ":qa<CR>", { noremap = true, silent = true, desc = "Quit All" })
+vim.keymap.set("n", "<leader>e", ":e<CR>", { noremap = true, silent = true, desc = "Edit" })
+vim.keymap.set("n", "<leader>t", ":terminal<CR>", { noremap = true, silent = true, desc = "Terminal" })
 
 -- Panes
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true, desc = "Vertical Split" })
